@@ -3,9 +3,14 @@ package com.udemy.ecommerce.entities;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class PRODUIT {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idProduit;
 	private String nomProduit;
 	private Double prixProduit;
